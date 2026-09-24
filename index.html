@@ -167,6 +167,22 @@ a:hover{color:var(--gold-deep)}
 .site-footer .wrap{padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:24px}
 .footer-domain{font-family:var(--latin);font-size:15px;letter-spacing:.12em}
 
+/* ---- 最初の画面と名前の由来を1枚の写真でつなぐ（PC） ---- */
+.photo-band{position:relative}
+@media (min-width:901px){
+  .photo-band{background:#1A1A1A}
+  .hero{position:static;overflow:visible;background:transparent}
+  .hero-bg img{object-position:50% 100%}
+  .hero-inner{z-index:1}
+  .about{position:relative;background:transparent;padding:72px 0 120px}
+  .about .label{color:var(--gold)}
+  .about-title{color:#F5F0E7}
+  .about-title .amp{color:var(--gold)}
+  .about-lead{color:#F5F0E7}
+  .about-body p.text{color:#E6E0D6}
+  .about .label,.about-title,.about-lead,.about-body p.text{text-shadow:0 1px 18px rgba(0,0,0,.7),0 0 2px rgba(0,0,0,.5)}
+}
+
 /* ================= スマホ ================= */
 @media (max-width:900px){
   :root{--pad:20px}
@@ -276,6 +292,7 @@ a:hover{color:var(--gold-deep)}
 
 <main id="top">
 
+<div class="photo-band">
 <section class="hero">
   <picture class="hero-bg">
     <source media="(max-width:900px)" srcset="assets/hero-sp.webp" type="image/webp">
@@ -314,6 +331,7 @@ a:hover{color:var(--gold-deep)}
     </div>
   </div>
 </section>
+</div>
 
 <section class="service" id="service" aria-labelledby="service-title">
   <div class="wrap">
