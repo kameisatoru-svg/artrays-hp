@@ -133,6 +133,13 @@ a:hover{color:var(--gold-deep)}
 .svc-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
 .svc[open] .svc-icon::after{transform:translate(-50%,-50%) rotate(0deg)}
 .svc-subs{padding:0 0 32px 116px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.svc-hero{grid-column:1/-1;position:relative;margin:0;overflow:hidden;background:var(--dark)}
+.svc-hero img{display:block;width:100%;height:auto;aspect-ratio:1680/713;object-fit:cover}
+.svc-hero figcaption{position:static}
+.svc-hero figcaption p{position:absolute;left:28px;bottom:26px;color:#FAF6EE}
+.svc-hero figcaption p{display:inline-block;margin:0;max-width:min(38em,calc(100% - 56px));padding:14px 22px;background:rgba(24,22,19,.62);font-family:var(--mincho);font-size:21px;font-weight:600;line-height:1.8;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.svc-hero small{position:absolute;right:12px;top:10px;font-size:11px;color:#FAF6EE;background:rgba(24,22,19,.55);padding:2px 8px;letter-spacing:.05em}
+.svc[open] .svc-desc{visibility:hidden}
 .svc-sub{background:var(--band);padding:22px 24px;display:flex;flex-direction:column;gap:8px}
 .svc-sub h3{margin:0;font-family:var(--mincho);font-size:18px;font-weight:600;line-height:1.6}
 .svc-sub p{margin:0;font-size:14px;line-height:1.8;color:var(--muted)}
@@ -252,6 +259,8 @@ a:hover{color:var(--gold-deep)}
   .svc summary .svc-desc{display:none}
   .svc-desc-sp{display:block;margin:0;font-size:14px;line-height:1.8;color:var(--muted)}
   .svc-subs{padding:0 0 24px 48px;display:flex;flex-direction:column;gap:12px}
+  .svc-hero img{aspect-ratio:4/3}
+  .svc-hero figcaption p{left:10px;right:10px;bottom:10px;max-width:none;padding:10px 12px;font-size:14px;line-height:1.7}
   .svc-sub{padding:16px;gap:6px}
   .svc-sub h3{font-size:17px}
   .svc-sub p{font-size:13px}
@@ -367,7 +376,10 @@ a:hover{color:var(--gold-deep)}
           <span class="svc-icon" aria-hidden="true"></span>
         </summary>
         <div class="svc-subs">
-          <p class="svc-desc-sp">店舗の内装に携わって30年。なかでも飲食店は得意分野です。お店や施設の思いをかたちに、完成イメージを見ながら一緒につくり上げます。</p>
+          <figure class="svc-hero">
+            <picture><source srcset="assets/svc/shop.webp" type="image/webp"><img src="assets/svc/shop.jpg" alt="木のカウンターと温かい照明の飲食店の店内" width="1680" height="713" loading="lazy"></picture>
+            <figcaption><p>店舗の内装に携わって30年。なかでも飲食店は得意分野です。お店や施設の思いをかたちに、完成イメージを見ながら一緒につくり上げます。</p><small>イメージ画像</small></figcaption>
+          </figure>
           <div class="svc-sub"><h3>飲食店・店舗の新装・改装</h3><p>飲食店は、私たちの得意分野です。厨房の動きやすさからお客さまの席の居心地まで考えて、また来たくなるお店をつくります。今のお店の模様替えも、営業への影響が少ない進め方でご提案します。</p></div>
           <div class="svc-sub"><h3>オフィス・事務所の内装</h3><p>働きやすい空間を、プランづくりから仕上げまでお手伝いします。席を決めずに働くフリーアドレスの席づくりや、床下に配線を通せる床、LAN・Wi-Fiなどのネット環境の整備にも対応します。</p></div>
           <div class="svc-sub"><h3>医療・福祉施設の内装</h3><p>利用される方が安心して過ごせるよう、配慮しながら進めます。</p></div>
@@ -381,7 +393,10 @@ a:hover{color:var(--gold-deep)}
           <span class="svc-icon" aria-hidden="true"></span>
         </summary>
         <div class="svc-subs">
-          <p class="svc-desc-sp">壁紙や床の張替えから、間取りを変えるリノベーション、増改築まで。住み慣れた家を、これからの暮らしに合わせて。</p>
+          <figure class="svc-hero">
+            <picture><source srcset="assets/svc/reform.webp" type="image/webp"><img src="assets/svc/reform.jpg" alt="和室をひらいて広くしたLDK" width="1680" height="713" loading="lazy"></picture>
+            <figcaption><p>壁紙や床の張替えから、間取りを変えるリノベーション、増改築まで。住み慣れた家を、これからの暮らしに合わせて。</p><small>イメージ画像</small></figcaption>
+          </figure>
           <div class="svc-sub"><h3>壁紙・床の張替え</h3><p>お部屋の雰囲気をがらりと変える、壁紙と床の張替え。暮らし方やお好みに合わせて素材からご提案し、美しい仕上がりにこだわります。</p></div>
           <div class="svc-sub"><h3>キッチン・お風呂・トイレ</h3><p>毎日使う場所だからこそ、使いやすく、気持ちよく。キッチンやユニットバス、トイレなど、住まいの設備の入れ替えを承ります。</p></div>
           <div class="svc-sub"><h3>バリアフリー</h3><p>手すりの取付や段差をなくす工事、開け閉めしやすい引き戸への交換など。年を重ねても、住み慣れた家で安心して暮らせるように。介護保険を使った住宅改修もご相談ください。</p></div>
@@ -398,7 +413,10 @@ a:hover{color:var(--gold-deep)}
           <span class="svc-icon" aria-hidden="true"></span>
         </summary>
         <div class="svc-subs">
-          <p class="svc-desc-sp">網戸や障子の張替え、鍵の取替えといった小さな修繕から、窓の寒さ・結露対策まで。困ったときは、気軽にお声がけください。</p>
+          <figure class="svc-hero">
+            <picture><source srcset="assets/svc/repair.webp" type="image/webp"><img src="assets/svc/repair.jpg" alt="ペアガラスの窓と障子、アコーディオンドアのある部屋" width="1680" height="713" loading="lazy"></picture>
+            <figcaption><p>網戸や障子の張替え、鍵の取替えといった小さな修繕から、窓の寒さ・結露対策まで。困ったときは、気軽にお声がけください。</p><small>イメージ画像</small></figcaption>
+          </figure>
           <div class="svc-sub"><h3>網戸・障子の張替え</h3><p>破れた網戸や障子も、張り替えれば見違えるように。網戸は枠ごとの交換もできます。</p></div>
           <div class="svc-sub"><h3>玄関の鍵の取替え</h3><p>鍵が回りにくい、壊れてしまった。そんなときは、鍵の取替えをご相談ください。</p></div>
           <div class="svc-sub"><h3>カーテン・ブラインド</h3><p>光の入り方や外からの見え方に合わせて。ロールスクリーンも含め、お部屋に合う品選びから取付まで承ります。</p></div>
@@ -415,7 +433,10 @@ a:hover{color:var(--gold-deep)}
           <span class="svc-icon" aria-hidden="true"></span>
         </summary>
         <div class="svc-subs">
-          <p class="svc-desc-sp">病院・クリニック、歯科医院、動物病院のレントゲン室など、X線を扱うお部屋の工事を得意としています。鉛を使って、X線が外へ漏れないお部屋をつくります。</p>
+          <figure class="svc-hero">
+            <picture><source srcset="assets/svc/xray.webp" type="image/webp"><img src="assets/svc/xray.jpg" alt="X線撮影室と鉛入りの引き戸" width="1680" height="713" loading="lazy"></picture>
+            <figcaption><p>病院・クリニック、歯科医院、動物病院のレントゲン室など、X線を扱うお部屋の工事を得意としています。鉛を使って、X線が外へ漏れないお部屋をつくります。</p><small>イメージ画像</small></figcaption>
+          </figure>
           <div class="svc-sub"><h3>鉛を使った壁・床・天井</h3><p>X線が部屋の外へ漏れないよう、鉛を張り込んだ壁や床、天井をつくります。使う機器やお部屋に合わせた鉛の厚みで、すき間なく仕上げます。</p></div>
           <div class="svc-sub"><h3>鉛入りの扉・のぞき窓</h3><p>出入り口の扉や、操作室から中を見るのぞき窓にも、鉛の入ったものを。毎日の開け閉めまで考えて取り付けます。</p></div>
           <div class="svc-sub"><h3>開業・移転・機器の入れ替えに</h3><p>新しく開業されるとき、移転や改装、レントゲン機器を入れ替えるときも。まわりの内装工事とあわせて、まとめてお任せください。</p></div>
@@ -429,7 +450,10 @@ a:hover{color:var(--gold-deep)}
           <span class="svc-icon" aria-hidden="true"></span>
         </summary>
         <div class="svc-subs">
-          <p class="svc-desc-sp">LED看板の製作・取付から、店舗や施設のサイン工事全般まで。</p>
+          <figure class="svc-hero">
+            <picture><source srcset="assets/svc/sign.webp" type="image/webp"><img src="assets/svc/sign.jpg" alt="夕暮れの店先に灯るLED看板" width="1680" height="713" loading="lazy"></picture>
+            <figcaption><p>LED看板の製作・取付から、店舗や施設のサイン工事全般まで。</p><small>イメージ画像</small></figcaption>
+          </figure>
           <div class="svc-sub"><h3>LED看板の製作・取付</h3><p>店舗や施設の顔になる看板を、製作から取付まで。</p></div>
           <div class="svc-sub"><h3>サイン工事全般</h3><p>店舗・施設の看板や案内サインなどを承ります。</p></div>
         </div>
