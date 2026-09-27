@@ -664,9 +664,9 @@ a:hover{color:var(--gold-deep)}
       items.forEach(function(o){ if(o!==d) o.open=false; });
       if(clicked!==d) return;
       clicked=null;
-      var hero=d.querySelector('.svc-hero')||d;
+      var hero=d;  // 項目の上の横線（タイトルの上）をヘッダーの下にそろえる
       requestAnimationFrame(function(){ requestAnimationFrame(function(){
-        var top=hero.getBoundingClientRect().top+window.pageYOffset-(header?header.offsetHeight:0);
+        var top=hero.getBoundingClientRect().top+window.pageYOffset-(header?header.offsetHeight:0)-1;  // 1px＝上の線そのものも見せる
         window.scrollTo({top:top,behavior:'smooth'});
       }); });
     });
