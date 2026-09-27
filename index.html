@@ -654,9 +654,22 @@ a:hover{color:var(--gold-deep)}
 })();
 // 私たちの仕事：一度に開くのは1つだけ（name属性に未対応のブラウザ向け）
 (function(){
-  var items=document.querySelectorAll('.svc');
+  var items=document.querySelectorAll('.svc'), clicked=null;
+  var header=document.querySelector('.site-header');
   items.forEach(function(d){
-    d.addEventListener('toggle',function(){ if(d.open){ items.forEach(function(o){ if(o!==d) o.open=false; }); } });
+    // 押して開いたときだけ、写真の上端がヘッダーのすぐ下に来るように動かす
+    d.querySelector('summary').addEventListener('click',function(){ clicked=d; });
+    d.addEventListener('toggle',function(){
+      if(!d.open) return;
+      items.forEach(function(o){ if(o!==d) o.open=false; });
+      if(clicked!==d) return;
+      clicked=null;
+      var hero=d.querySelector('.svc-hero')||d;
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){
+        var top=hero.getBoundingClientRect().top+window.pageYOffset-(header?header.offsetHeight:0);
+        window.scrollTo({top:top,behavior:'smooth'});
+      }); });
+    });
   });
 })();
 </script>
