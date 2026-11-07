@@ -192,6 +192,13 @@ a:hover{color:var(--gold-deep)}
 .contact-actions{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
 .contact-tel{font-family:var(--latin);font-size:52px;font-weight:600;letter-spacing:.05em;color:var(--gold);line-height:1.2}
 .contact-tel:hover{color:var(--gold)}
+/* LINE：パソコンは QR、スマホはボタン */
+.contact-line{display:flex;align-items:center;gap:16px;margin-top:6px}
+.contact-line-qr{display:block;width:112px;height:112px;padding:6px;background:#fff;box-sizing:border-box}
+.contact-line-qr img{display:block;width:100%;height:100%}
+.contact-line-text{font-size:15px;line-height:1.7;color:var(--on-dark-sub);text-align:right}
+.contact-line-text b{display:block;color:var(--on-dark);font-size:17px;font-weight:600}
+.btn-line{display:none;background:#06C755;color:#fff!important;border-color:#06C755}
 .site-footer{background:var(--dark);color:#8C877E;border-top:1px solid var(--dark-line);font-size:13px}
 .site-footer .wrap{padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:24px}
 .footer-domain{font-family:var(--latin);font-size:15px;letter-spacing:.12em}
@@ -293,6 +300,8 @@ a:hover{color:var(--gold-deep)}
   .contact-tel{display:flex;align-items:center;justify-content:center;gap:10px;height:60px;background:var(--orange);color:var(--dark);font-size:26px}
   .contact-tel:hover{color:var(--dark)}
   .contact-actions .btn-orange{background:transparent;border-color:#6E6A63;color:var(--on-dark)}
+  .contact-line{display:none}
+  .btn-line{display:inline-flex}
   .site-footer .wrap{flex-direction:column;gap:6px;font-size:12px}
 }
 </style>
@@ -626,7 +635,12 @@ a:hover{color:var(--gold-deep)}
     </div>
     <div class="contact-actions">
       <a class="contact-tel" href="tel:0977210603">0977-21-0603</a>
+      <a class="btn btn-line" href="https://line.me/R/ti/p/@369omvou" target="_blank" rel="noopener">LINEで相談する</a>
       <a class="btn btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSe8YiPKKKSSd-awITM0OBjjBnWzbDYSBNqgRd7YxAQeyYthRA/viewform" target="_blank" rel="noopener">フォームで問い合わせる</a>
+      <div class="contact-line">
+        <p class="contact-line-text"><b>LINEでも相談できます</b>QRコードを読み取って友だち追加<br>写真を送るだけでも大丈夫です</p>
+        <a class="contact-line-qr" href="https://line.me/R/ti/p/@369omvou" target="_blank" rel="noopener" aria-label="LINEで友だち追加"><img src="assets/line_qr.svg" alt="LINE友だち追加のQRコード" width="100" height="100"></a>
+      </div>
     </div>
   </div>
 </section>
