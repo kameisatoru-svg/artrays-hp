@@ -85,7 +85,9 @@ a:hover{color:var(--gold-deep)}
 .hero-catch{font-family:var(--mincho);font-size:22px;font-weight:600;letter-spacing:.12em;color:var(--gold);margin:0}
 .hero-lead{display:flex;flex-direction:column;gap:30px}
 .hero-lead p{margin:0;font-size:16px;line-height:2.1;color:#E6E0D6}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.hero-consult{display:flex;flex-direction:column;gap:10px}
+.btn-line-hero{background:#06C755;border-color:#06C755;color:#fff!important}
 
 /* ---- 名前の由来 ---- */
 .about{background:var(--band);padding:88px 0 96px}
@@ -246,6 +248,7 @@ a:hover{color:var(--gold-deep)}
   .hero-lead p br{display:none}
   .hero-btns{flex-direction:column;gap:12px}
   .hero-btns .btn{width:100%}
+  .hero-consult{width:100%}
   .hero-btns .btn-ghost-light{border-color:var(--ink);background:transparent;color:var(--ink)}
 
   .label{font-size:13px;letter-spacing:.28em}
@@ -350,7 +353,10 @@ a:hover{color:var(--gold-deep)}
       <div class="hero-lead">
         <p class="shadow-pc">住まいや店舗の内装から、医療施設の工事、看板まで。<br>お客さまの思いをじっくりお聞きし、かたちにしていきます。</p>
         <div class="hero-btns">
-          <a class="btn btn-orange" href="#contact">相談する</a>
+          <div class="hero-consult">
+            <a class="btn btn-orange" href="#contact">相談する</a>
+            <a class="btn btn-line-hero" href="https://line.me/R/ti/p/@369omvou" target="_blank" rel="noopener">LINEで相談する</a>
+          </div>
           <a class="btn btn-ghost-light" href="#works">施工事例を見る
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
         </div>
